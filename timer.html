@@ -1,0 +1,36 @@
+<div id="output1">timer<br></div>
+
+<script>
+	var output1 = document.getElementById('output1');
+	
+var varCounter = 0;
+var array = [];
+
+var myVar = setInterval(myTimer, 200);
+
+function Nrandom(){
+	var num = Math.floor(Math.random() * Math.floor(10));
+	return num;
+	}
+
+function timestop(){
+	if (varCounter < 19){
+		varCounter++;
+		return varCounter;
+	}else{
+		clearInterval(myVar);
+		return varCounter+1;
+	}
+}
+function myTimer() {
+		var asaa = timestop();
+    	
+    	var d = Nrandom();
+		document.getElementById("output1").innerHTML = d;
+		
+		var obj =[{"random":d},{"id":asaa}];
+        array.push(obj);
+        console.log(array);
+}
+		
+</script>
